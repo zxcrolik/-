@@ -21,12 +21,33 @@
 <canvas id="canvas"></canvas>
 
 <div id="controls">
-  <button class="choice">A</button>
-  <button class="choice">U</button>
-  <button class="choice">G</button>
-  <button class="choice">C</button>
+<button class="choice" data-letter="А">А</button>
+<button class="choice" data-letter="У">У</button>
+<button class="choice" data-letter="Г">Г</button>
+<button class="choice" data-letter="Ц">Ц</button>
+</div>
+<div id="helper">
+  <h3>🧬 Подсказка: как ДНК превращается в иРНК</h3>
+
+  <img 
+    src="dna-mrna-table.png" 
+    alt="Таблица соответствия нуклеотидов ДНК и иРНК"
+  >
+
+  <table>
+    <tr>
+      <th>ДНК</th>
+      <th>иРНК</th>
+    </tr>
+    <tr><td>А</td><td>У</td></tr>
+    <tr><td>Т</td><td>А</td></tr>
+    <tr><td>Г</td><td>Ц</td></tr>
+    <tr><td>Ц</td><td>Г</td></tr>
+  </table>
+
+
 </div>
 
 <script src="game.js"></script>
 </body>
-</html>
+</html>  
