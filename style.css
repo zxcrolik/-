@@ -111,3 +111,66 @@ canvas {
   50% { transform: translateX(4px); }
   100% { transform: translateX(0); }
 }
+/* =========================
+   📱 АДАПТАЦИЯ ДЛЯ СМАРТФОНОВ
+   ========================= */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+    background-attachment: scroll; /* фикс для мобилок */
+  }
+
+  #topBar {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+  }
+
+  #lesson h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #instruction {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  canvas {
+    height: 220px;          /* 🔥 важно */
+    width: 95%;
+  }
+
+  #controls {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 кнопки */
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .choice {
+    font-size: 28px;        /* удобно нажимать */
+    padding: 18px;
+  }
+
+  #helper {
+    max-width: 95%;
+    padding: 10px;
+  }
+
+  #helper h3 {
+    font-size: 16px;
+  }
+
+  #helper table {
+    font-size: 13px;
+    width: 100%;
+  }
+
+  #helper th,
+  #helper td {
+    padding: 5px;
+  }
+}
+
