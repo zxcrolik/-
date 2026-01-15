@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #eef6ff;
+}
+
+#topBar {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background: #ddeeff;
+  font-size: 18px;
+}
+
+#lesson {
+  padding: 10px;
+  background: #ffffff;
+  border-bottom: 1px solid #ccc;
+}
+
+#instruction {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+canvas {
+  display: block;
+  margin: 10px auto;
+  width: 95%;
+  max-width: 700px;
+  height: 320px;
+  background: #f0f8ff;
+  border-radius: 12px;
+}
+
+#controls {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 10px;
+}
+
+.choice {
+  font-size: 24px;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: white;
+  transition: transform 0.1s;
+}
+
+/* УСПЕХ */
+.choice.correct {
+  background: #b6f5b6;
+  transform: scale(1.1);
+}
+
+/* ОШИБКА */
+.choice.wrong {
+  background: #f5b6b6;
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
