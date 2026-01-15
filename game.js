@@ -1,18 +1,13 @@
 // =====================
 // CANVAS
 // =====================
+
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-function resizeCanvas() {
-  const rect = canvas.getBoundingClientRect();
-  canvas.width = rect.width;
-  canvas.height = rect.height;
-}
-
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
-
+// ФИКСИРОВАННЫЙ РАЗМЕР ИГРЫ
+canvas.width = 500;
+canvas.height = 270;
 
 // =====================
 // UI
