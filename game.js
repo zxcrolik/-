@@ -23,13 +23,13 @@ let proteins = 0;
 // =====================
 // БИОЛОГИЯ
 // =====================
-const dna = "ATG";
+const dna = "АТГ";
 let mrna = "";
 let dnaIndex = 0;
 let proteinChain = [];
 
 const codonTable = {
-  UAC: "Тирозин"
+  УАЦ: "Тирозин"
 };
 
 // =====================
@@ -56,11 +56,16 @@ updateInstruction();
 // КНОПКИ
 // =====================
 document.querySelectorAll(".choice").forEach(btn => {
-  btn.onclick = () => handleChoice(btn.textContent, btn);
+  btn.onclick = () => handleChoice(btn.innerText.trim(), btn);
 });
 
 function complement(n) {
-  return { A: "U", T: "A", G: "C", C: "G" }[n];
+  return {
+    А: "У", // A → U
+    Т: "А", // T → A   
+    Г: "Ц", // G → C
+    Ц: "Г"  // C → G
+  }[n];
 }
 
 function handleChoice(letter, btn) {
