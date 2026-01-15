@@ -69,13 +69,15 @@ body {
 
 canvas {
   display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 200px;           /* 🔑 фикс для телефона */
   margin: 10px auto;
-  width: 95%;
-  max-width: 700px;
-  height: 320px;
   background: #f0f8ff;
   border-radius: 12px;
 }
+
+
 
 #controls {
   display: grid;
@@ -138,25 +140,33 @@ canvas {
     text-align: center;
   }
 
-  canvas {
-    height: 220px;          /* 🔥 важно */
-    width: 95%;
-  }
+ canvas {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 200px;           /* 🔑 фикс для телефона */
+  margin: 10px auto;
+  background: #f0f8ff;
+  border-radius: 12px;
+}
 
-  #controls {
-    grid-template-columns: repeat(2, 1fr); /* 2x2 кнопки */
-    gap: 10px;
-    padding: 12px;
-  }
+#controls {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 🔥 2×2 */
+  gap: 10px;
+  padding: 10px;
+}
+
 
   .choice {
-    font-size: 28px;        /* удобно нажимать */
-    padding: 18px;
-  }
+  font-size: 20px;      /* было 24 */
+  padding: 10px;
+  border-radius: 12px;
+}
 
   #helper {
     max-width: 95%;
-    padding: 10px;
+    padding: 14px;
   }
 
   #helper h3 {
@@ -166,11 +176,15 @@ canvas {
   #helper table {
     font-size: 13px;
     width: 100%;
-  }
+  } 
+#helper img {
+  max-height: 180px;
+  object-fit: contain;
+}
+
 
   #helper th,
   #helper td {
     padding: 5px;
   }
 }
-
