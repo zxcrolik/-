@@ -3,8 +3,16 @@
 // =====================
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-canvas.width = canvas.offsetWidth;
-canvas.height = canvas.offsetHeight;
+
+function resizeCanvas() {
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = rect.width;
+  canvas.height = rect.height;
+}
+
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
 
 // =====================
 // UI
