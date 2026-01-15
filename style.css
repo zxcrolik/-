@@ -1,8 +1,15 @@
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
-  background: #eef6ff;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+
+  background-image: url("background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
 
 #topBar {
   display: flex;
@@ -22,6 +29,43 @@ body {
   font-size: 16px;
   font-weight: bold;
 }
+
+#helper {
+  margin: 15px auto;
+  max-width: 600px;
+  text-align: center;
+  background: #f6f0ff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#helper table {
+  font-size: 14px;
+  width: 90%;
+  margin: 10px auto;
+  border-collapse: collapse;
+}
+
+#helper img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+#helper th,
+#helper td {
+  border: 1px solid #aaa;
+  padding: 6px;
+}
+
+
+
+#helper th, #helper td {
+  border: 1px solid #aaa;
+  padding: 8px;
+}
+
 
 canvas {
   display: block;
